@@ -1,0 +1,3 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+#GET http://localhost:42071/api/MzscReports/branches;
+GET http://localhost:42071/api/Appointment/check-date?branchId=200610&date=2023-04-20

@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="linq2db" Version="4.1.1" />
+    <PackageReference Include="linq2db.AspNet" Version="4.1.1" />
+    <PackageReference Include="linq2db.SqlServer" Version="4.1.1" />
+    <PackageReference Include="MailKit" Version="3.4.3" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.0" />
+    <PackageReference Include="MimeKit" Version="3.4.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DbModel\MizeCRM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MizeCRM.generated.cs</LastGenOutput>
+    </None>
+    <None Update="DbModel\MizePortal.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MizePortal.generated.cs</LastGenOutput>
+    </None>
+    <None Update="DbModel\MZReports.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MZReports.generated.cs</LastGenOutput>
+    </None>
+    <None Update="DbModel\OraDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>OraDb.generated.cs</LastGenOutput>
+    </None>
+    <None Update="DbModel\OraDbMsc.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>OraDbMsc.generated.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DbModel\MizeCRM.generated.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MizeCRM.tt</DependentUpon>
+    </Compile>
+    <Compile Update="DbModel\MizePortal.generated.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MizePortal.tt</DependentUpon>
+    </Compile>
+    <Compile Update="DbModel\MZReports.generated.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MZReports.tt</DependentUpon>
+    </Compile>
+    <Compile Update="DbModel\OraDb.generated.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>OraDb.tt</DependentUpon>
+    </Compile>
+    <Compile Update="DbModel\OraDbMsc.generated.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>OraDbMsc.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+
+</Project>
